@@ -1,0 +1,281 @@
+.stylenav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: linear-gradient(135deg, #8B0000, #FF6347);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem; /* Decrease font size */
+    color: #FFD700;
+    letter-spacing: 1px;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    /* background-color: #f9f9f9; */
+    background: linear-gradient(180deg, #fff3e0, #ffe4b5);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-link {
+    font-size: 1rem; /* Decrease font size */
+    padding: 8px 16px; /* Decrease padding */
+    font-weight: 600;
+    color: #FFD700 !important;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+}
+
+.contact-section {
+    background: linear-gradient(150deg, #8B0000, #FF6347);
+    color: white;
+    padding: 15px 8%; /* Reduced padding for more compactness */
+}
+
+.top-deals-title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.5rem; /* Reduced font size */
+    font-weight: 700;
+    color: #8b0000;
+}
+
+.contact-section {
+    background: linear-gradient(150deg, #8B0000, #FF6347);
+    color: white;
+    padding: 20px 10%; /* Reduced padding for a more compact section */
+}
+
+.contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Small gap between icon and text */
+    font-size: 1rem; /* Reduced font size for compactness */
+    margin: 5px 10px; /* Reduced margin */
+    font-weight: bold;
+}
+
+.contact-item i.contact-icon {
+    font-size: 1.5rem; /* Icon size */
+    color: #FFD700;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    justify-content: center;  /* Horizontally center */
+    align-items: center;
+}
+
+.social-icons a {
+    color: #FFD700;
+    font-size: 1.5rem; /* Icon size */
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+
+/* Footer Section */
+.footer {
+    background: linear-gradient(120deg, #343a40, #555);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.95rem;
+}
+
+.footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Product Card Section */
+ .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    height: 100%;
+}
+
+
+/* Product Image */
+/* .card-body img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 200px;  
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-bottom: 15px; 
+}
+
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+.card-text:first-of-type {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #e63946;  
+    margin-bottom: 10px;
+}
+
+ 
+.card-text:nth-of-type(2) {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.card-body .btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+
+.delete-form {
+    display: inline;
+    margin-top: 10px;
+}
+
+
+.col-md-4 {
+    padding: 10px;
+}*/
+
+@media (max-width: 768px) {
+    
+    .card-body img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+    }
+} 
+
+
+/* .d-flex {
+    gap: 10px; /* Reduced gap between flex items 
+} */
+
+/* .d-flex img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    max-width: 100%;
+} */
+
+
+@media (max-width: 768px) {
+    .product-card-container {
+        flex-direction: column;
+    }
+
+    .product-card-container .product-info,
+    .product-card-container .price-history-card {
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .product-card-container .product-image {
+        margin-bottom: 10px; 
+    }
+
+     Adjust the size of the price graph for smaller screens 
+    .priceGraph {
+        height: 200px; 
+    }
+} 
+
+#graphDiv {
+    position: relative;
+    height: 100%;      /* Ensure full height usage */
+    width: 100%;       /* Ensure full width usage */
+    padding: 0;        /* Remove any unnecessary padding */
+    overflow: hidden;  /* Avoids unwanted scrollbars */
+}
+
+
+
