@@ -51,7 +51,11 @@
 </nav>
 
 <div class="container my-5">
-    <h2 class="text-center text-dark mb-4" style="color: maroon !important">Your Tracked Products</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 class="text-center text-dark mb-4" style="color: maroon !important; font-size: 2.5rem;">Your Tracked Products</h2>
     {% if products %}
         <div class="row gy-4">
             {% for product in products %}
@@ -99,7 +103,12 @@
             {% endfor %}
         </div>
     {% else %}
-        <p class="text-center">You haven’t added any products to track yet. Start adding now!</p>
+        <p class="text-center" style="font-size: 1.2rem;" >You haven’t added any products to track yet.</p>
+        <p class="text-center" style="font-size: 1.2rem;" >Start adding now!</p>
+        <br>
+        <br>
+        <br>
+      
     {% endif %}
 </div>
 
@@ -158,68 +167,6 @@
             }
         });
     });
-    
-    // function renderGraph(productLink, graphDiv) {
-    //     console.log(`Initiating fetch for price history with product link: ${productLink}`);
-    //     // console.log(`check: ${encodeURIComponent(productLink)}`)
-    //     fetch(`/price-history/${encodeURIComponent(productLink)}`)
-    //         .then(response => {
-    //             console.log('Response received:', response);
-    //             if (!response.ok) {
-    //                 console.error(`Network response was not ok: ${response.statusText}`);
-    //                 throw new Error('Network response error');
-    //             }
-    //             return response.json();
-    //         })
-    //         .then(data => {
-    //             console.log('Price history data received:', data);
-    
-    //             if (data.error) {
-    //                 console.warn(`Error message from server: ${data.error}`);
-    //                 graphDiv.innerHTML = `<span class='text-danger' style='font-size: 1rem;'>${data.error}</span>`;
-    //                 return;
-    //             }
-    
-    //             if (data.length === 0) {
-    //                 console.log('No price history available for this product.');
-    //                 graphDiv.innerHTML = "<span class='text-secondary' style='font-size: 1rem;'>No price history available yet.</span>";
-    //                 return;
-    //             }
-    
-    //             console.log('Plotting graph for product link:', productLink);
-    //             // Extract dates and prices
-    //             const dates = data.map(entry => new Date(entry.date));
-    //             const prices = data.map(entry => entry.price);
-    //             console.log('Dates extracted:', dates);
-    //             console.log('Prices extracted:', prices);
-    
-    //             // Plot the graph using Plotly
-    //             const trace = {
-    //                 x: dates,
-    //                 y: prices,
-    //                 type: 'scatter',
-    //                 mode: 'lines+markers',
-    //                 marker: { color: 'blue' },
-    //                 line: { shape: 'spline' }
-    //             };
-    
-    //             const layout = {
-    //                 title: 'Price History',
-    //                 xaxis: { title: 'Date', showgrid: false },
-    //                 yaxis: { title: 'Price', showgrid: true },
-    //                 margin: { t: 30, b: 40, l: 50, r: 10 },
-    //                 height: 200,
-    //                 paper_bgcolor: '#f9f9f9',
-    //                 plot_bgcolor: '#f9f9f9'
-    //             };
-    
-    //             Plotly.newPlot(graphDiv, [trace], layout);
-    //         })
-    //         .catch(error => {
-    //             console.error("Error occurred while fetching price history:", error);
-    //             graphDiv.innerHTML = "<span class='text-danger' style='font-size: 1rem;'>Error loading graph.</span>";
-    //         });
-    // }
 
 function renderGraph(productLink, graphDiv) {
     console.log(`Initiating fetch for price history with product link: ${productLink}`);
@@ -310,55 +257,6 @@ function renderGraph(productLink, graphDiv) {
             graphDiv.innerHTML = "<span class='text-danger' style='font-size: 1rem;'>Error loading graph.</span>";
         });
 }
-
-
-//     document.addEventListener('DOMContentLoaded', () => {
-//     const refreshButton = document.getElementById('refreshPricesButton');
-
-//     refreshButton.addEventListener('click', () => {
-//         console.log("Refresh button clicked");
-//         fetch('/refresh-prices', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//         })
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log("Refresh response data:", data);
-
-//             if (data.error) {
-//                 alert(`Error: ${data.error}`);
-//                 return;
-//             }
-
-//             if (data.updated_products && data.updated_products.length > 0) {
-//                 data.updated_products.forEach(product => {
-//                     const productLink = product.product_link;
-//                     const newPrice = product.new_price;
-
-//                     console.log(`Updating graph for product: ${productLink} with new price: ${newPrice}`);
-
-//                     // Find the graph div for this product
-//                     const graphDiv = document.querySelector(`[data-product-link="${productLink}"]`);
-
-//                     if (graphDiv) {
-//                         // Fetch the updated price history and re-render the graph
-//                         renderGraph(productLink, graphDiv);
-//                     }
-//                 });
-
-//                 alert("Prices refreshed and updated!");
-//             } else {
-//                 alert("No price changes detected.");
-//             }
-//         })
-//         .catch(error => {
-//             console.error("Error while refreshing prices:", error);
-//             alert("An error occurred while refreshing prices.");
-//         });
-//     });
-// });
 
 
 document.addEventListener('DOMContentLoaded', () => {
